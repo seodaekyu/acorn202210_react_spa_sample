@@ -4,4 +4,5 @@
 export { default as Home} from './Home';
 export { default as Game} from './Game';
 export { default as Study} from './Study';
-export { default as BUy} from './Buy';
+export { default as Buy} from './Buy';
+export { default as LoginPage} from './LoginPage';

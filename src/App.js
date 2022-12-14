@@ -1,5 +1,5 @@
 import { NavLink, Route, withRouter } from "react-router-dom";
-import { Home, Study, Game } from "./pages";
+import { Home, Study, Game, LoginPage } from "./pages";
 import Buy from "./pages/Buy";
 
 function App({location, match, history}) {
@@ -26,6 +26,7 @@ function App({location, match, history}) {
         <li><NavLink activeStyle={activeStyle} to="/buy?code=1&name=handphone">1번 상품구매</NavLink></li>
         <li><NavLink activeStyle={activeStyle} to="/buy?code=2&name=water">2번 상품구매</NavLink></li>
         <li><NavLink activeStyle={activeStyle} to="/buy?code=3&name=coffee">3번 상품구매</NavLink></li>
+        <li><NavLink activeStyle={activeStyle} to="/login">로그인</NavLink></li>
       </ul>
       <Route exact path="/" component={Home}/>
       <Route exact path="/study" component={Study}/>
@@ -33,6 +34,7 @@ function App({location, match, history}) {
       {/* name 이라는 이름의 경로 파라미터를 읽을 수 있도록 설정 */}
       <Route path="/game/:name" component={Game}/>
       <Route path="/buy" component={Buy}/>
+      <Route path="/login" component={LoginPage}/>
     </div>
   );
 }
